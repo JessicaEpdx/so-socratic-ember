@@ -53,3 +53,7 @@ body{
 .manage-question{
   margin:20px;
 }
+
+.link:hover{
+  text-decoration:none;
+}
