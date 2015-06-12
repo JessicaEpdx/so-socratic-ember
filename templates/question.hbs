@@ -1,7 +1,27 @@
 <div class="question-div">
   <div class="question">
-    <h3>Question: {{this.description}}</h3>
-    <h4>Author: {{this.name}}</h4>
-    <img class="image"{{bind-attr src=this.image}} />
+    <h3>Question: {{description}}</h3>
+    <h4>Author: {{name}}</h4>
+    <img class="image"{{bind-attr src=image}} />
   </div>
 </div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <form class="answer-form">
+      <div class="form-group">
+        <label for="answer-name">Whats your name?</label>
+        {{input  id="answer-name" class="form-control" value=answerName }}
+        <label for="answer-description">Whats your answer?</label>
+        {{input  id="answer-description" class="form-control" value=answerDescription }}
+        <label for="answer-image">Give us a picture of you!</label>
+        {{input  id="answer-image" class="form-control" value=answerImage }}
+      </div>
+      <button class="btn btn-primary" {{action 'saveAnswer'}}>Add Answer</button>
+    </form>
+  </div>
+</div>
+
+{{#each answer in answers}}
+  {{answer.answerDescription}}
+{{/each}}
