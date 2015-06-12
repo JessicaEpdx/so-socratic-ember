@@ -1,0 +1,17 @@
+<form class="question-form">
+  <div class="form-group">
+    <label for="name">Whats your name?</label>
+    {{input  id="name" class="form-control" value=name }}
+    <label for="image">Upload a picture</label>
+    {{input  id="image" class="form-control" value=image }}
+    <label for="description">Whats your question?</label>
+    {{input  id="description" class="form-control" value=description }}
+  </div>
+  <button class="btn btn-primary" {{action 'saveQuestion'}}>Add Question</button>
+
+</form>
+
+{{#each}}
+  <h3 class="author">Author: {{name}}</h3>
+  <h4 class="question">{{description}}</h4>
+{{/each}}
