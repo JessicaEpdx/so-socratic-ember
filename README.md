@@ -20,8 +20,8 @@ clone this program to your desktop
 
 in your terminal:
 
-  $cd Desktop/Message_Board
-  $python -m SimpleHTTPServer
+    $cd Desktop/Message_Board
+    $python -m SimpleHTTPServer
 
 keep terminal open and go to the url "localhost:8000" in your web browser and enjoy!
 
