@@ -16,6 +16,7 @@ MessageBoard.QuestionController = Ember.ObjectController.extend({
       var question = this.get('controllers.question.model');
       question.get('answers').pushObject(newAnswer);
       question.save();
+      
       this.set('answerName', "");
       this.set('answerDescription', "");
       this.set('answerImage', "");

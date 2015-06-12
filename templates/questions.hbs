@@ -1,4 +1,6 @@
 <div class="row">
+
+{{#if isQuestioning}}
   <div class="col-sm-12">
     <form class="question-form">
       <div class="form-group">
@@ -12,6 +14,12 @@
       <button class="btn btn-primary" {{action 'saveQuestion'}}>Add Question</button>
     </form>
   </div>
+{{else}}
+  <div class="col-sm-12">
+    <button class="btn btn-primary" {{action 'addQuestion'}}>What's Your Question?</button>
+  </div>
+{{/if}}
+
 </div>
 
 <div class="row">

@@ -6,26 +6,37 @@
   </div>
 </div>
 
-{{#if isAnswering}}
 <div class="row">
-  <div class="col-sm-12">
-    <form class="answer-form">
-      <div class="form-group">
-        <label for="answer-name">Whats your name?</label>
-        {{input  id="answer-name" class="form-control" value=answerName }}
-        <label for="answer-description">Whats your answer?</label>
-        {{input  id="answer-description" class="form-control" value=answerDescription }}
-        <label for="answer-image">Give us a picture of you!</label>
-        {{input  id="answer-image" class="form-control" value=answerImage }}
-      </div>
-      <button class="btn btn-primary" {{action 'saveAnswer'}}>Answer!</button>
-    </form>
-  </div>
-</div>
-{{else}}
-<button class="btn btn-primary" {{action 'addAnswer'}}>Add Answer</button>
 
-{{/if}}
-{{#each answer in answers}}
-  {{answer.answerDescription}}
-{{/each}}
+  {{#if isAnswering}}
+    <div class="col-sm-12">
+      <form class="answer-form">
+        <div class="form-group">
+          <label for="answer-name">Whats your name?</label>
+          {{input  id="answer-name" class="form-control" value=answerName }}
+          <label for="answer-image">Give us a picture of you!</label>
+          {{input  id="answer-image" class="form-control" value=answerImage }}
+          <label for="answer-description">Whats your answer?</label>
+          {{input  id="answer-description" class="form-control" value=answerDescription }}
+        </div>
+        <button class="btn btn-primary" {{action 'saveAnswer'}}>Answer!</button>
+      </form>
+    </div>
+
+  {{else}}
+    <div class="col-sm-12">
+      <button class="btn btn-primary" {{action 'addAnswer'}}>What's Your Answer?</button>
+    </div>
+  {{/if}}
+
+</div>
+
+<div class="row">
+  {{#each answer in answers}}
+    <div class="col-sm-12">
+      {{answer.answerName}}
+      <img class="image"{{bind-attr src=answerImage}} />
+      {{#link-to 'answer' answer.id}}{{answer.answerDescription}}{{/link-to}}
+    </div>
+  {{/each}}
+</div>

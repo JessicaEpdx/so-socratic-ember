@@ -1,0 +1,14 @@
+<div class="answer-div">
+  <div class="answer">
+    <h3>Answer: {{answerDescription}}</h3>
+    <h4>Author: {{answerName}}</h4>
+    <img class="image"{{bind-attr src=answerImage}} />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="header">Delete Question</div>
+      <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+  </div>
+</div>
