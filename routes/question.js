@@ -1,4 +1,4 @@
-MessageBoard.AllQuestionsRoute = Ember.Route.extend({
+MessageBoard.AllQuestionRoute = Ember.Route.extend({
   model: function(){
     return this.store.find('question');
   }

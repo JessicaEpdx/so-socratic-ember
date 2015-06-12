@@ -17,7 +17,7 @@
 <div class="row">
   {{#each}}
     <div class="col col-sm-6">
-      <div class="author">Author: {{name}}</div>
+      {{#link-to 'question' this.id}}<div class="author">Author: {{name}}</div>{{/link-to}}
       <div class="question">{{description}}</div>
     </div>
   {{/each}}
