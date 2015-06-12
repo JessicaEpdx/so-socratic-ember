@@ -1,6 +1,12 @@
 body{
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  background-color:#a8a6a6;
+  height:100%
+}
+
+.container{
+  height:100%;
 }
 .manage-navbar{
   float:right;
@@ -65,19 +71,60 @@ body{
 }
 
 .navbar-default{
-  width:100%;
+  height:70px;
+  padding-top:5px;
+  margin-top:20px;
+  background-color:lightgrey;
+
 }
 
 .navbar-brand{
   padding:3px;
 }
+
 .logo{
-  height:45px;
+  height:55px;
   float:left;
 }
 
 .company{
-  padding-top:10px;
+  padding-top:30px;
+  font-family: 'Cinzel', serif;
+  font-weight:900;
+  color:#474747;
+  letter-spacing:1px;
+  font-size:25px;
   padding-left:3px;
   float:left;
+}
+
+.dropdown-toggle{
+  color:black !important;
+}
+
+.btn, .btn:hover, .btn:focus{
+  outline:none;
+  color:white;
+  border:1px solid darkgrey;
+
+}
+
+.hide-question-button{
+  background-color:#61895c;
+}
+
+.hide-question-button:hover{
+  background-color:#40563d;
+}
+
+.question-button{
+  background-color:#a386c9;
+}
+
+.question-button:hover{
+  background-color:#69597f;
+}
+
+.btn-default, .btn-default:hover{
+  color:black;
 }

@@ -4,12 +4,15 @@ MessageBoard.QuestionsController = Ember.ArrayController.extend({
   actions: {
     addQuestion: function(){
       this.set('isQuestioning', true);
+      this.set('isViewing', false);
+      
     },
     hideForm: function(){
       this.set('isQuestioning', false);
     },
     seeQuestions: function(){
       this.set('isViewing', true);
+      this.set('isQuestioning', false);
     },
     hideQuestions: function(){
       this.set('isViewing', false);
