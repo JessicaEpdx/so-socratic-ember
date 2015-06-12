@@ -6,6 +6,7 @@
   </div>
 </div>
 
+{{#if isAnswering}}
 <div class="row">
   <div class="col-sm-12">
     <form class="answer-form">
@@ -17,11 +18,14 @@
         <label for="answer-image">Give us a picture of you!</label>
         {{input  id="answer-image" class="form-control" value=answerImage }}
       </div>
-      <button class="btn btn-primary" {{action 'saveAnswer'}}>Add Answer</button>
+      <button class="btn btn-primary" {{action 'saveAnswer'}}>Answer!</button>
     </form>
   </div>
 </div>
+{{else}}
+<button class="btn btn-primary" {{action 'addAnswer'}}>Add Answer</button>
 
+{{/if}}
 {{#each answer in answers}}
   {{answer.answerDescription}}
 {{/each}}
