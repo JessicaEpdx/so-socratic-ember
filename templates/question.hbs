@@ -1,8 +1,14 @@
-<div class="question-div">
-  <div class="question">
-    <h3>Question: {{description}}</h3>
-    <h4>Author: {{name}}</h4>
+<div class="row">
+  <div class="col-sm-4">
     <img class="image"{{bind-attr src=image}} />
+    <h6>Asked by: {{name}}</h6>
+
+  </div>
+
+  <div class="col-sm-8 well">
+    <h3>{{title}}</h3>
+
+    <h4>{{description}}</h4>
   </div>
 </div>
 
@@ -16,6 +22,8 @@
           {{input  id="answer-name" class="form-control" value=answerName }}
           <label for="answer-image">Give us a picture of you!</label>
           {{input  id="answer-image" class="form-control" value=answerImage }}
+          <label for="answer-title">Answer Title</label>
+          {{input  id="answer-title" class="form-control" value=answerTitle }}
           <label for="answer-description">Whats your answer?</label>
           {{input  id="answer-description" class="form-control" value=answerDescription }}
         </div>
@@ -32,12 +40,16 @@
 </div>
 
 
-<div class="row">
-  {{#each answer in answers}}
-    <div class="col-sm-12">
-      {{answer.answerName}}
-      <img class="image"{{bind-attr src=answerImage}} />
-      {{#link-to 'answer' answer.id}}{{answer.answerDescription}}{{/link-to}}
+{{#each answer in answers}}
+  <div class="row">
+    <div class="col-sm-12 answer-div">
+      <img class="image-icon"{{bind-attr src=answer.answerImage}} />
+      {{#link-to 'answer' answer.id}}{{answer.answerTitle}}{{/link-to}}
     </div>
-  {{/each}}
-</div>
+  </div>
+  <div class="row answer-row">
+    <div class="col-sm-12 answer-name">
+      Answered by: {{answer.answerName}}
+    </div>
+  </div>
+{{/each}}

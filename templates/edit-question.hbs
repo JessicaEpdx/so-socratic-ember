@@ -1,8 +1,8 @@
-<div class="question-div">
+<div class="manage-question">
   <div class="question">
-    <h3>Question: {{description}}</h3>
-    <h4>Author: {{name}}</h4>
-    <img class="image"{{bind-attr src=image}} />
+    <h3>{{title}}</h3>
+    <img class="image"{{bind-attr src=image}} /><br />
+    <span class="name">Asked by: {{name}}</span>
   </div>
 </div>
 
@@ -15,7 +15,9 @@
         {{input  id="name" class="form-control" value=name }}
         <label for="image">New Picture</label>
         {{input  id="image" class="form-control" value=image }}
-        <label for="description">Change Question</label>
+        <label for="title">Change Title</label>
+        {{input  id="title" class="form-control" value=title }}
+        <label for="description">Change Description</label>
         {{input  id="description" class="form-control" value=description }}
       </div>
       <button class="btn btn-primary" {{action 'edit'}}>Edit Question</button>
@@ -24,8 +26,3 @@
 </div>
 
 <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
-
-
-{{#each answer in answers}}
-{{answer.answerDescription}}
-{{/each}}

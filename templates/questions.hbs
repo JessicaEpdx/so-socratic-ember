@@ -1,13 +1,13 @@
 <!-- MENU AT TOP -->
 <div class="row">
   <div class="col-sm-4">
-    <button class="btn btn-primary" {{action 'addQuestion'}}>Question?</button>
+    <button class="btn btn-info" {{action 'addQuestion'}}>Question?</button>
   </div>
   <div class="col-sm-4">
     <button class="btn btn-warning" {{action 'seeQuestions'}}>See Questions</button>
   </div>
   <div class="col-sm-4">
-    <button class="btn btn-warning" {{action 'hideQuestions'}}>Hide Questions</button>
+    <button class="btn btn-primary" {{action 'hideQuestions'}}>Hide Questions</button>
   </div>
 </div>
 
@@ -15,18 +15,21 @@
 {{#if isQuestioning}}
   <div class="row">
     <div class="col-sm-12">
+      <button class="btn btn-default" {{action 'hideForm'}}>Hide Form</button>
+
       <form class="question-form">
         <div class="form-group">
-          <label for="name">Whats your name?</label>
+          <label for="name">Whats Your Name?</label>
           {{input  id="name" class="form-control" value=name }}
-          <label for="image">Upload a picture</label>
+          <label for="image">Upload A Picture</label>
           {{input  id="image" class="form-control" value=image }}
-          <label for="description">Whats your question?</label>
+          <label for="title">Question Title</label>
+          {{input  id="title" class="form-control" value=title }}
+          <label for="description">Question Description</label>
           {{input  id="description" class="form-control" value=description }}
         </div>
-        <button class="btn btn-info" {{action 'addQuestion'}}>Add Question</button>
+        <button class="btn btn-info" {{action 'saveQuestion'}}>Add Question</button>
       </form>
-      <button class="btn btn-default" {{action 'hideForm'}}>Hide Form</button>
     </div>
   </div>
 {{/if}}
@@ -34,10 +37,10 @@
 <!-- TOGGLE LIST OF EXISTING QUESTIONS -->
 {{#if isViewing}}
   {{#each}}
-    <div class="row">
+    <div class="row questions">
       <div class="col-sm-12">
-        {{#link-to 'question' id}}<div class="question">{{description}}</div>{{/link-to}}
-        <div class="author">{{name}}</div>
+        {{#link-to 'question' id}}<div class="question">{{title}}</div>{{/link-to}}
+        <div class="name">Asked By:{{name}}</div>
       </div>
     </div>
   {{/each}}

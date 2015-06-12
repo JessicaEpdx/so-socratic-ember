@@ -1,8 +1,9 @@
 <div class="row">
   {{#each}}
   <div class="col col-sm-4">
-    <div class="author">Author: {{name}}</div>
-    {{#link-to 'edit-question' id}}<div class="question">{{description}}</div>{{/link-to}}
+    {{#link-to 'edit-question' id}}<div class="description">{{title}}</div>{{/link-to}}
+
+    {{#link-to 'edit-question' id}}<div class="name">Asked by: {{name}}</div>{{/link-to}}
   </div>
   {{/each}}
 </div>

@@ -17,6 +17,7 @@ MessageBoard.QuestionsController = Ember.ArrayController.extend({
     saveQuestion: function(){
       var newQuestion = this.store.createRecord('question', {
         name: this.get('name'),
+        title: this.get('title'),
         description: this.get('description'),
         image: this.get('image')
       });
@@ -25,6 +26,11 @@ MessageBoard.QuestionsController = Ember.ArrayController.extend({
       this.set('name', "")
       this.set('description', "")
       this.set('image', "")
+      this.set('title', "")
+
+
+      this.set('isViewing', true);
+
 
     }
   }

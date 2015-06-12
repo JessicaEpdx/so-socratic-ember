@@ -1,3 +1,7 @@
+body{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
 .manage-navbar{
   float:right;
 }
@@ -9,4 +13,43 @@
 
 .btn{
   margin-bottom:30px;
+}
+
+.image{
+  width:100px;
+}
+
+.well{
+  padding-top:5px;
+}
+
+.image-icon{
+  width:50px;
+}
+
+.answer-div{
+  font-size:20px;
+}
+.answer-name{
+  font-size:12px;
+}
+
+.answer-row{
+  margin-bottom:25px;
+}
+
+.answer{
+  margin-bottom:25px;
+}
+
+.questions{
+  margin-bottom:25px;
+}
+
+.name{
+  font-size:12px;
+}
+
+.manage-question{
+  margin:20px;
 }
