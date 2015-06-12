@@ -8,7 +8,7 @@
   <div class="col-sm-8 well">
     <h3>{{title}}</h3>
 
-    <h4>{{description}}</h4>
+    <h5>{{description}}</h5>
   </div>
 </div>
 
@@ -41,15 +41,18 @@
 
 
 {{#each answer in answers}}
-  <div class="row">
-    <div class="col-sm-12 answer-div">
-      <img class="image-icon"{{bind-attr src=answer.answerImage}} />
-      {{#link-to 'answer' answer.id}}{{answer.answerTitle}}{{/link-to}}
-    </div>
-  </div>
   <div class="row answer-row">
-    <div class="col-sm-12 answer-name">
-      Answered by: {{answer.answerName}}
+    <div class="col-sm-12">
+      <img class="image-icon"{{bind-attr src=answer.answerImage}} />
+      <div class="answer-title">
+        {{#link-to 'answer' answer.id classNames='answer-link'}}{{answer.answerTitle}}{{/link-to}}
+      </div>
+      <div class="answer-name">
+        Answered by: {{answer.answerName}}
+      </div>
+      <div class="answer-description">
+        {{answer.answerDescription}}
+      </div>
     </div>
   </div>
 {{/each}}

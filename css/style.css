@@ -60,7 +60,12 @@ body{
   margin:20px;
 }
 
+.link{
+  color:#513b70;
+  font-size:20px;
+}
 .link:hover{
+  color:#271f33;
   text-decoration:none;
 }
 
@@ -127,4 +132,36 @@ body{
 
 .btn-default, .btn-default:hover{
   color:black;
+}
+
+.btn-info{
+  background-color:#33a574;
+}
+.btn-info:hover{
+  background-color:#277251;
+}
+
+
+.answers{
+  font-size:30px;
+  margin-bottom:20px;
+  border-bottom:2px solid black;
+}
+.answer-title a{
+  font-size:25px;
+  text-align:bottom;
+}
+
+.answer-link:hover{
+  text-decoration:none;
+}
+
+.answer-name{
+  margin-top:0px;
+  font-size:10px;
+}
+
+.answer-description{
+  margin-top:10px;
+  padding-left:20px;
 }

@@ -1,22 +1,15 @@
 <!-- MENU AT TOP -->
 <div class="row">
-  <div class="col-sm-4">
-    <button class="btn question-button" {{action 'addQuestion'}}>Question?</button>
-  </div>
-  <div class="col-sm-4">
-    <button class="btn btn-warning" {{action 'seeQuestions'}}>See Questions</button>
-  </div>
-  <div class="col-sm-4">
-    <button class="btn hide-question-button" {{action 'hideQuestions'}}>Hide Questions</button>
-  </div>
+    <button class="col-sm-12 btn question-button" {{action 'addQuestion'}}>Gotta Question?</button>
+</div>
+<div class="row">
+    <button class="col-sm-12 btn btn-warning" {{action 'seeQuestions'}}>Wanna Answer?</button>
 </div>
 
 <!-- TOGGLE ADD QUESTION FORM -->
 {{#if isQuestioning}}
   <div class="row">
     <div class="col-sm-12">
-      <button class="btn btn-default" {{action 'hideForm'}}>Hide Form</button>
-
       <form class="question-form">
         <div class="form-group">
           <label for="name">Whats Your Name?</label>
@@ -39,7 +32,7 @@
   {{#each}}
     <div class="row questions">
       <div class="col-sm-12">
-        {{#link-to 'question' id}}<div class="question">{{title}}</div>{{/link-to}}
+        {{#link-to 'question' id classNames='link'}}<div class="question">{{title}}</div>{{/link-to}}
         <div class="name">Asked By:{{name}}</div>
       </div>
     </div>

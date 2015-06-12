@@ -4,12 +4,12 @@
   </div>
 </div>
 
-<div class="row">
-  {{#each}}
-  <div class="col col-sm-4">
-    {{#link-to 'edit-question' id}}<div class="description">{{title}}</div>{{/link-to}}
+{{#each}}
+  <div class="row answer-row">
+    <div class="col col-sm-12">
+      {{#link-to 'edit-question' id classNames='link'}}<div class="description">{{title}}</div>
 
-    {{#link-to 'edit-question' id}}<div class="name">Asked by: {{name}}</div>{{/link-to}}
+      <div class="name">Asked by: {{name}}</div>{{/link-to}}
+    </div>
   </div>
-  {{/each}}
-</div>
+{{/each}}
