@@ -1,0 +1,28 @@
+<div class="question-div">
+  <div class="question">
+    <h3>Question: {{description}}</h3>
+    <h4>Author: {{name}}</h4>
+    <img class="image"{{bind-attr src=image}} />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="header">Update Question</div>
+    <form class="edit-question-form well">
+      <div class="form-group">
+        <label for="name">New name</label>
+        {{input  id="name" class="form-control" value=name }}
+        <label for="image">New Picture</label>
+        {{input  id="image" class="form-control" value=image }}
+        <label for="description">Change Question</label>
+        {{input  id="description" class="form-control" value=description }}
+      </div>
+      <button class="btn btn-primary" {{action 'edit'}}>Edit Question</button>
+    </form>
+  </div>
+</div>
+
+{{#each answer in answers}}
+{{answer.answerDescription}}
+{{/each}}
