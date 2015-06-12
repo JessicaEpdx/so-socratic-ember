@@ -3,10 +3,14 @@ MessageBoard.AnswerController = Ember.ObjectController.extend({
   actions: {
     delete: function() {
       if(confirm('Are you sure?')) {
-        var questionId = this.get('question.id');
         var answer = this.get('model').destroyRecord();
-        this.transitionToRoute('question', questionId);
+        this.transitionToRoute('answers');
       };
+    },
+    goBack: function() {
+      var questionId = this.get('question.id');
+      this.transitionToRoute('question', questionId);
+
     }
   }
 });
