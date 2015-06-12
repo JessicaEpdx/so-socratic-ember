@@ -1,0 +1,8 @@
+<div class="row">
+  {{#each}}
+    <div class="col col-sm-6">
+      <div class="author">{{#link-to 'answer' id}}Author: {{answerName}}{{/link-to}}</div>
+      <div class="question">{{answerDescription}}</div>
+    </div>
+  {{/each}}
+</div>
